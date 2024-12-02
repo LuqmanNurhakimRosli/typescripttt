@@ -9,6 +9,21 @@ export const format = (title: string , param: string | number) => {
     console.log(format(title, param));
 }
 
-export const printFormat = (title: string , param: string | number) => {
+
+//void function
+export const printFormat = (title: string , param: string | number): void => {
     console.log(format(title, param));
+}
+
+//promise function
+export const fetchData = (url: string): Promise<string> => 
+    Promise.resolve(`Data from ${url}`);
+
+//Rest parameters
+function introduce(salutation: string, ...names: string[]): string {
+    return `${salutation} ${names.join(' ')}`;
+}
+
+export function getName(user: {first:string ; last:string;}): string {
+    return `${user.first} ${user.last}`;
 }
